@@ -1,0 +1,40 @@
+
+@import './scss/variables';
+
+@keyframes loader {
+
+  from {width: 0; opacity: 1;}
+  to {width: 100%; opacity: 1;}
+
+}
+
+.primary-loader {
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 4px;
+
+  &.active div {
+
+    height: 100%;
+    background: white;
+    width: 100%;
+    opacity: 0;
+    animation: loader 10s cubic-bezier(0, 0, 0, 1);
+    -webkit-animation: loader 10s cubic-bezier(0, 0, 0, 1);
+    -moz-animation: loader 10s cubic-bezier(0, 0, 0, 1);
+    -op-animation: loader 10s cubic-bezier(0, 0, 0, 1);
+
+  }
+
+}
+
+.welcome-screen {
+
+  background: #212121;
+  width: 100vw;
+  height: 100vh;
+
+}

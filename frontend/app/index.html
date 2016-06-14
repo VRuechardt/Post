@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="post">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#212121">
+    <title>Post</title>
+
+    <link rel="stylesheet" href="css/critical.css">
+
+</head>
+<body>
+
+    <div class="primary-loader active">
+        <div></div>
+    </div>
+    <div class="welcome-screen">
+
+    </div>
+
+    <!--removeIf(!browser)-->
+    <script>window.fbAsyncInit=function(){FB.init({appId:'1014621818614561',xfbml:true,version:'v2.6'});if(window.facebookCallback){window.facebookCallback();}};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/sdk.js";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+    <!--endRemoveIf(!browser)-->
+
+
+    <div ng-view ng-cloak autoscroll="true" class="app"></div>
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css" />
+
+    <!--removeIf(browser)-->
+    <script type="text/javascript" src="cordova.js"></script>
+    <!--endRemoveIf(browser)-->
+
+    <script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>
