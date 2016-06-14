@@ -14,6 +14,9 @@ require('angular-scroll-glue');
 // views
 require('./views/home');
 
+// controllers
+require('./controllers/loader')
+
 
 angular.module('post', [
 
@@ -21,7 +24,10 @@ angular.module('post', [
         'luegg.directives',
 
         // views
-        'movement.home'
+        'post.home',
+
+        // controllers
+        'post.loader'
 
     ])
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -33,6 +39,7 @@ angular.module('post', [
 
     }])
     .factory('facebookLogin', require('./services/facebook-login'))
+    .factory('loading', require('./services/loader-svc'))
     .factory('User', require('./resources/user'))
 
 

@@ -10,12 +10,16 @@
 
     <link rel="stylesheet" href="css/critical.css">
 
+    <meta name="fragment" content="!" />
+    <base href="/index.html">
+
 </head>
 <body>
 
-    <div class="primary-loader active">
-        <div></div>
+    <div class="primary-loader" ng-controller="LoaderController">
+        <div ng-class="{inactive: hidden}"></div>
     </div>
+
     <div class="welcome-screen">
 
     </div>
