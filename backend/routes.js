@@ -6,8 +6,16 @@
 
 var express = require('express');
 var path = require('path');
+var compression = require('compression');
 
 module.exports = function(app) {
+
+    app.use(compression({filter: function shouldCompress(req, res) {
+        if (req.headers['x-no-compression']) {
+            return false
+        }
+        return compression.filter(req, res)
+    }}));
 
     // serve static content
     app.use('/',express.static(path.normalize(path.join(__dirname, '../frontend/dest'))));
