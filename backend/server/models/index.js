@@ -8,16 +8,19 @@ var env       = process.env.NODE_ENV || 'production';
 var config    = require('../config');
 var db        = {};
 
-
-var sequelize = new Sequelize(config.mysql.database, config.mysql.username, config.mysql.password, config.mysql, {
+var opts = {
     dialect: 'mysql',
     dialectOptions:
     {
         supportBigNumbers: true
     }
-});
+
+};
+//we dont want logging during tests
+if(process.env.NODE_ENV === 'test') opts.logging = false;
 
 
+var sequelize = new Sequelize(config.mysql.database, config.mysql.username, config.mysql.password, opts);
 
 fs
     .readdirSync(__dirname)

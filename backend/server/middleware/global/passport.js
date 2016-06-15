@@ -15,7 +15,7 @@ module.exports = function(app, passport){
             where: {id: userId}
         }).then(function(users){
             if(users.length === 1){
-                done(null, users);
+                done(null, users[0]);
             } else {
                 throw new Error('user with id %d does not exist', userId);
             }
