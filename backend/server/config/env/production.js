@@ -8,7 +8,7 @@ module.exports = {
         "username": "root",
         "password": "v7suzAbrT6es",
         "database": "post",
-        "host": "127.0.0.1",
+        "host": "post.crxsuyu2upnj.eu-central-1.rds.amazonaws.com",
         "dialect": "mysql"
     }
 };
