@@ -19,8 +19,9 @@ var opts = {
 //we dont want logging during tests
 if(process.env.NODE_ENV === 'test') opts.logging = false;
 
+console.log(config.mysql.host);
 
-var sequelize = new Sequelize(config.mysql.database, config.mysql.username, config.mysql.password, opts);
+var sequelize = new Sequelize(config.mysql.database, config.mysql.username, config.mysql.password, config.mysql, opts);
 
 fs
     .readdirSync(__dirname)
