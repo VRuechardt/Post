@@ -25,9 +25,8 @@ var all = {
     url: 'http://localhost',
 
     // Server port
-    port: process.env.PORT || 80,
-
-    designer_registration_code: "aJ4+Nubre+5f3Ew!esUGbaF6Ses@!ru8E"
+    port: process.env.PORT || 80
+    
 };
 
 // Export the config object based on the NODE_ENV
